@@ -30,4 +30,7 @@ func main() {
 	}
 
 	fmt.Println("Successfully pinged postgres")
+
+
+
 }
