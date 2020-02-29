@@ -12,4 +12,8 @@ services:
     volumes:
       - ./deployments/postgres/:/docker-entrypoint-initdb.d/
   golang:
-    build: .
+    build:
+      context: ./
+      dockerfile: build/package/Dockerfile
+    depends_on:
+      - postgres
