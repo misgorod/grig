@@ -21,7 +21,7 @@ type Repository struct {
 func New() (*Repository, error) {
 	db, err := sqlx.Open(
 		"postgres",
-		fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s", host, port, user, password, dbname),
+		fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname),
 	)
 	return &Repository{db}, err
 }

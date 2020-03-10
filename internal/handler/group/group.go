@@ -1,4 +1,4 @@
-package student
+package group
 
 import (
 	"github.com/go-chi/chi"
@@ -19,11 +19,11 @@ func New(repository *repository.Repository) *Handler {
 }
 
 func (h *Handler) Post(w http.ResponseWriter, r *http.Request) {
-	var student model.Student
-	if !common.ParseBody(w, r, &student) {
+	var group model.StudyGroup
+	if !common.ParseBody(w, r, &group) {
 		return
 	}
-	err := h.repository.CreateStudent(student)
+	err := h.repository.CreateGroup(group)
 	if err != nil {
 		common.RespondInternal(w, err, http.StatusInternalServerError)
 		return
@@ -38,48 +38,35 @@ func (h *Handler) Get(w http.ResponseWriter, r *http.Request) {
 		common.RespondError(w, errors.New("id must be integer"), http.StatusBadRequest)
 		return
 	}
-	student, err := h.repository.GetStudentByID(id)
+	group, err := h.repository.GetGroupByID(id)
 	if errors.Is(err, errors.ErrNotFound) {
-		common.RespondError(w, errors.New("student with this id not found"), http.StatusNotFound)
+		common.RespondError(w, errors.New("group with this id not found"), http.StatusNotFound)
 		return
 	}
 	if err != nil {
 		common.RespondInternal(w, err, http.StatusInternalServerError)
 		return
 	}
-	common.RespondJSON(w, http.StatusOK, student)
+	common.RespondJSON(w, http.StatusOK, group)
 }
 
 func (h *Handler) GetAll(w http.ResponseWriter, r *http.Request) {
-	var students []model.Student
+	var groups []model.StudyGroup
 	var err error = nil
-	_, exists := common.Param(r, "group_id")
-	if !exists {
-		students, err = h.repository.GetStudents()
-		if err != nil {
-			common.RespondInternal(w, err, http.StatusInternalServerError)
-			return
-		}
-	} else {
-		groupID, ok := common.ParamInt(w, r, "group_id")
-		if !ok {
-			return
-		}
-		students, err = h.repository.GetStudentsByGroup(groupID)
-		if err != nil {
-			common.RespondInternal(w, err, http.StatusInternalServerError)
-			return
-		}
+	groups, err = h.repository.GetGroups()
+	if err != nil {
+		common.RespondInternal(w, err, http.StatusInternalServerError)
+		return
 	}
-	common.RespondJSON(w, http.StatusOK, students)
+	common.RespondJSON(w, http.StatusOK, groups)
 }
 
 func (h *Handler) Put(w http.ResponseWriter, r *http.Request) {
-	var student model.Student
-	if !common.ParseBody(w, r, &student) {
+	var group model.StudyGroup
+	if !common.ParseBody(w, r, &group) {
 		return
 	}
-	err := h.repository.UpsertStudent(student)
+	err := h.repository.UpsertGroup(group)
 	if err != nil {
 		common.RespondInternal(w, err, http.StatusInternalServerError)
 		return
@@ -94,7 +81,7 @@ func (h *Handler) Delete(w http.ResponseWriter, r *http.Request) {
 		common.RespondError(w, errors.New("id must be integer"), http.StatusBadRequest)
 		return
 	}
-	err = h.repository.DeleteStudent(id)
+	err = h.repository.DeleteGroup(id)
 	if err != nil {
 		common.RespondInternal(w, err, http.StatusInternalServerError)
 		return

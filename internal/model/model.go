@@ -20,24 +20,24 @@ type Subject struct {
 }
 
 type ExamType struct {
-	ID int `json:"-"`
+	ID int `json:"examTypeId"`
 	Type string `json:"examType"`
 }
 
 type StudyPlan struct {
-	ID int `json:"-"`
+	ID int `json:"studyPlanId"`
 	Subject
 	ExamType
 }
 
 type Mark struct {
-	ID int `json:"-"`
-	Name string `json:"MarkName"`
-	Value string `json:"MarkValue"`
+	ID int `json:"markId"`
+	Name string `json:"markName"`
+	Value string `json:"markValue"`
 }
 
 type Journal struct {
-	ID int `json:"journalId,omitempty"`
+	ID int `json:"journalId"`
 	Student
 	StudyPlan
 	InTime bool `json:"journalInTime"`

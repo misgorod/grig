@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54e5dbb1-44d0-48df-9f21-1a4e9523b8b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmd/grig/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/common/request.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/common/response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/handler/student/student.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/model/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/repository/journal.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/repository/repository.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/repository/student.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/repository/studygroup.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/errors/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/handler/group/group.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/handler/journal/journal.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/build/package/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/definitions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/package/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/build/package/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/grig/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/grig/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deployments/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deployments/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deployments/postgres/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/deployments/postgres/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/common/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/common/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/handler/student/student.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handler/student/student.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/repository/journal.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/journal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/repository/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/repository/student.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/student.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/repository/studygroup.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/studygroup.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +65,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../service-bus" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -79,6 +77,20 @@
       <recent name="$PROJECT_DIR$/cmd/grig" />
       <recent name="$PROJECT_DIR$/build/package" />
     </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54e5dbb1-44d0-48df-9f21-1a4e9523b8b6" name="Default Changelist" comment="" />
+      <created>1583789905138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583789905138</updated>
+      <workItem from="1583789909449" duration="41000" />
+    </task>
+    <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -96,9 +108,17 @@
       <screen x="77" y="27" width="1843" height="1053" />
     </state>
     <state x="277" y="141" width="554" height="390" key="#com.intellij.fileTypes.FileTypeChooser/328.1440.1920.1080/77.27.1843.1053@77.27.1843.1053" timestamp="1582871754700" />
-    <state x="781" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582351226868">
+    <state x="781" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583789946997">
       <screen x="77" y="27" width="1843" height="1053" />
     </state>
-    <state x="781" y="310" width="424" height="484" key="FileChooserDialogImpl/77.27.1843.1053@77.27.1843.1053" timestamp="1582351226868" />
+    <state x="781" y="310" width="424" height="484" key="FileChooserDialogImpl/77.27.1843.1053@77.27.1843.1053" timestamp="1583789946997" />
+    <state x="654" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1583789910264">
+      <screen x="77" y="27" width="1843" height="1053" />
+    </state>
+    <state x="654" y="380" key="com.intellij.ide.util.TipDialog/77.27.1843.1053@77.27.1843.1053" timestamp="1583789910264" />
+    <state x="743" y="172" width="500" height="761" key="refactoring.ChangeSignatureDialog" timestamp="1583000936733">
+      <screen x="77" y="27" width="1843" height="1053" />
+    </state>
+    <state x="743" y="172" width="500" height="761" key="refactoring.ChangeSignatureDialog/77.27.1843.1053@77.27.1843.1053" timestamp="1583000936733" />
   </component>
 </project>

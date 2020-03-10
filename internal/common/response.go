@@ -17,17 +17,12 @@ func RespondJSON(w http.ResponseWriter, status int, payload interface{}) {
 	w.Write(response)
 }
 
-func RespondOk(w http.ResponseWriter) {
+func RespondOK(w http.ResponseWriter) {
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(http.StatusText(http.StatusOK)))
 }
 
-func RespondCreated(w http.ResponseWriter, id int64) {
-	RespondJSON(w, 201, map[string]int64{"id": id})
-}
-
 func RespondError(w http.ResponseWriter, err error, status int) {
-	log.Printf("%+v\n", err)
 	RespondJSON(w, status, map[string]string{"error": err.Error()})
 }
 
