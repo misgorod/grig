@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54e5dbb1-44d0-48df-9f21-1a4e9523b8b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/internal/handler/bus/bus.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/grig/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/grig/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +32,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/go1.13.5.linux-amd64" />
+  <component name="GOROOT" path="/usr/lib/go-1.13" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -55,6 +54,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -89,6 +91,14 @@
     <proxy>direct</proxy>
   </component>
   <component name="WindowStateProjectService">
+    <state x="590" y="214" width="800" height="677" key="#GOPATH" timestamp="1584642399743">
+      <screen x="71" y="27" width="1849" height="1053" />
+    </state>
+    <state x="590" y="214" width="800" height="677" key="#GOPATH/71.27.1849.1053/1920.0.1920.1080@71.27.1849.1053" timestamp="1584642399743" />
+    <state x="590" y="214" width="800" height="677" key="#GOROOT" timestamp="1584642382396">
+      <screen x="71" y="27" width="1849" height="1053" />
+    </state>
+    <state x="590" y="214" width="800" height="677" key="#GOROOT/71.27.1849.1053/1920.0.1920.1080@71.27.1849.1053" timestamp="1584642382396" />
     <state x="593" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582268568798">
       <screen x="77" y="27" width="1843" height="1053" />
     </state>
@@ -97,10 +107,11 @@
       <screen x="77" y="27" width="1843" height="1053" />
     </state>
     <state x="277" y="141" width="554" height="390" key="#com.intellij.fileTypes.FileTypeChooser/328.1440.1920.1080/77.27.1843.1053@77.27.1843.1053" timestamp="1582871754700" />
-    <state x="1228" y="387" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583828790691">
-      <screen x="405" y="0" width="2155" height="1440" />
+    <state x="777" y="310" width="374" height="354" key="FileChooserDialogImpl" timestamp="1584957876928">
+      <screen x="71" y="27" width="1849" height="1053" />
     </state>
     <state x="1228" y="387" key="FileChooserDialogImpl/328.1440.1920.1080/405.0.2155.1440@405.0.2155.1440" timestamp="1583828790691" />
+    <state x="777" y="310" width="374" height="354" key="FileChooserDialogImpl/71.27.1849.1053/1920.0.1920.1080@71.27.1849.1053" timestamp="1584957876928" />
     <state x="781" y="310" width="424" height="484" key="FileChooserDialogImpl/77.27.1843.1053@77.27.1843.1053" timestamp="1583789946997" />
     <state x="654" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1583789910264">
       <screen x="77" y="27" width="1843" height="1053" />
